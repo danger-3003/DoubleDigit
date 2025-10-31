@@ -36,7 +36,7 @@ function Navbar() {
               {
                 pageURLs.map((page, key) => (
                   <li key={key} className='w-max group'>
-                    <Link href={page.link} className={`px-1 group-hover:text-primary text-gray-900 transition-all duration-300 ${path === page.link && "text-primary font-semibold"}`}>
+                    <Link onClick={handleCloseMenu} href={page.link} className={`px-1 group-hover:text-primary text-gray-900 transition-all duration-300 ${path === page.link && "text-primary font-semibold"}`}>
                       {page.name}
                     </Link>
                     <div className={`bg-primary rounded-sm h-0.5 -mt-0.5 ${path === page.link ? "w-full" : "w-0 group-hover:w-full"} transition-all duration-300`}></div>
