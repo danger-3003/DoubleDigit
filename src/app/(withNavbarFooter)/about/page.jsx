@@ -1,10 +1,13 @@
 "use client"
 
 import React from 'react'
+import About from '@/components/pages/About/About'
 
 function AboutPage() {
   return (
-    <div>AboutPage</div>
+    <>
+      <About />
+    </>
   )
 }
 

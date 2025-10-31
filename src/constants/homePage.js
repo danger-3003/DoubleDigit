@@ -1,12 +1,15 @@
 export const homePageData = {
   heroSection: {
-    heading: (<span>Transform Your Business with <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Digital Intelligence</span></span>),
-    body: (<span>At <span className="font-semibold text-primary">DoubleDigit</span>, we combine digital marketing expertise, creative design, and cutting - edge AI automation to help your brand grow smarter, faster, and stronger. From data-driven campaigns to next - gen AI assistants - we make innovation your competitive edge.</span>)
+    heading: (<span>Transform Your Business with <span className="text-transparent" style={{
+      WebkitTextStroke: '1px #ffffff',
+    }}>Digital Intelligence</span>
+    </span>),
+    body: (<span>At <span className="font-bold text-lg md:text-xl text-white">DoubleDigit</span>, we combine digital marketing expertise, creative design, and cutting - edge AI automation to help your brand grow smarter, faster, and stronger. From data-driven campaigns to next - gen AI assistants - we make innovation your competitive edge.</span>)
   },
   aboutSection: {
     heading: "Who are we?",
     tagline: "We're not just another digital agency - we're your strategic partner in growth.",
-    body: (<>At <span className="font-semibold text-primary">DoubleDigit</span>, we believe in blending creativity with data and AI-driven insights to craft solutions that are both beautiful and effective. Our mission is simple: to deliver measurable impact through innovation.</>),
+    body: (<>At <span className="font-bold text-lg md:text-xl text-primary">DoubleDigit</span>, we believe in blending creativity with data and AI-driven insights to craft solutions that are both beautiful and effective. Our mission is simple: to deliver measurable impact through innovation.</>),
     cta: "Let's take your business to the next level - with creativity, intelligence, and precision."
   },
   services: {
@@ -37,11 +40,11 @@ export const homePageData = {
     }
   },
   vision: {
-    heading: "Vision",
+    heading: "Our Vision",
     body: "To empower businesses worldwide to thrive in the digital era by combining creativity, technology, and intelligence, delivering innovative solutions that transform brands and drive measurable growth."
   },
   mission: {
-    heading: "Mission",
+    heading: "Our Mission",
     body: "At DoubleDigit, our mission is to help businesses achieve smarter growth through:",
     points: [
       (<><span className="font-bold">Data-driven digital marketing:</span> Crafting campaigns that engage, convert, and deliver ROI.</>),

@@ -4,7 +4,7 @@ export const pageURLs = [
     link: "/",
   },
   {
-    name: "About",
+    name: "About Us",
     link: "/about"
   },
   {

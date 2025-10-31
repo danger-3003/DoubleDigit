@@ -5,6 +5,7 @@ import { homePageData } from '@/constants/homePage';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
+import Image from 'next/image';
 
 export default function Home() {
   const router = useRouter();
@@ -44,7 +45,17 @@ export default function Home() {
   return (
     <Container>
       {/* Hero sectiom */}
-      <section className="relative mt-24 flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F8F8] via-white to-blue-50 rounded-3xl">
+      <section
+        className="relative mt-24 flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F8F8] via-white to-blue-50 rounded-3xl"
+        style={
+          {
+            background: `linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5)),
+            url(/assets/header_bg.jpg)`,
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed"
+          }
+        }
+      >
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-1/2 -left-1/4 w-96 h-96 bg-gradient-to-tr from-secondary/10 to-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -52,23 +63,23 @@ export default function Home() {
 
         <div className="relative max-w-7xl px-4 sm:px-5 lg:px-8 py-20 text-center">
           <div className="space-y-8 animate-fadeIn">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
               {homePageData.heroSection.heading}
             </h1>
 
-            <p className="text-base md:text-lg text-text max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed">
               {homePageData.heroSection.body}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button
-                className={"px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 flex items-center gap-2"}
+                className={"px-5 py-2 bg-white text-secondary rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2"}
                 icon={<ArrowRight size={16} />}
                 name={"Get a Free Consultation"}
                 onClick={() => router.push('contact')}
               />
               <Button
-                className={"px-5 py-[6px] bg-white border-2 border-primary text-primary rounded-full font-semibold hover:bg-gradient-to-r from-primary to-secondary hover:text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"}
+                className={"px-5 py-[6px] bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-secondary transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"}
                 name={"Explore Services"}
                 onClick={() => router.push('services')}
               />
@@ -78,12 +89,12 @@ export default function Home() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="w-52 h-36 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center flex-col gap-5 group"
+                  className="w-52 h-36 p-4 bg-white/40 backdrop-blur-lg rounded-xl border border-gray-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center flex-col gap-5 group"
                 >
                   <div className={`size-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center text-white group-hover:-rotate-6 transition-all duration-300`}>
                     {service.icon}
                   </div>
-                  <p className="text-sm font-medium text-text">{service.title}</p>
+                  <p className="text-sm font-medium text-black">{service.title}</p>
                 </div>
               ))}
             </div>
@@ -187,35 +198,46 @@ export default function Home() {
       </section>
 
       {/* Vision & mission */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-primary to-secondary rounded-3xl p-10 text-white shadow-2xl">
-              <Eye className="w-12 h-12 mb-6" />
-              <h3 className="text-3xl font-bold mb-4">
-                {homePageData.vision.heading}
-              </h3>
-              <p className="text-lg leading-relaxed text-blue-50">
+          <div className="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-10">
+            <div className='max-w-[20rem] w-full md:basis-[40%]'>
+              <img src="/assets/vision.svg" alt="Vision" />
+            </div>
+            <div className="md:basis-[60%]">
+              <div className='flex items-center justify-start flex-row gap-3 text-secondary'>
+                <h3 className="text-3xl lg:text-4xl font-bold text-center md:text-left w-full">
+                  {homePageData.vision.heading}
+                </h3>
+              </div>
+              <p className="leading-relaxed text-text mt-5 md:mt-10 text-base md:text-lg">
                 {homePageData.vision.body}
               </p>
             </div>
-
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-10 text-white shadow-2xl">
-              <Target className="w-12 h-12 mb-6" />
-              <h3 className="text-3xl font-bold mb-4">
-                {homePageData.mission.heading}
-              </h3>
-              <p className="text-lg mb-6 text-gray-300">
-                At DoubleDigit, our mission is to help businesses achieve smarter growth through:
-              </p>
-              <ul className="space-y-3">
-                {homePageData.mission.points.map((point, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                    <div className="text-gray-200">{point}</div>
-                  </li>
-                ))}
-              </ul>
+          </div>
+          <div className="flex items-center justify-center flex-col-reverse md:flex-row gap-5 md:gap-10 mt-10">
+            <div className="md:basis-[60%]">
+              <div className='flex items-center justify-start flex-row gap-3 text-secondary'>
+                <h3 className="text-3xl lg:text-4xl font-bold text-center md:text-left w-full">
+                  {homePageData.mission.heading}
+                </h3>
+              </div>
+              <div className='mt-10'>
+                <p className="mb-6 text-text text-base md:text-lg">
+                  At DoubleDigit, our mission is to help businesses achieve smarter growth through:
+                </p>
+                <ul className="space-y-3">
+                  {homePageData.mission.points.map((point, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                      <div className="text-text">{point}</div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className='w-full max-w-[20rem] md:basis-[40%]'>
+              <img src="/assets/mission.png" alt="Mission" />
             </div>
           </div>
         </div>
