@@ -63,15 +63,15 @@ export default function Home() {
 
         <div className="relative max-w-7xl px-4 sm:px-5 lg:px-8 py-20 text-center">
           <div className="space-y-8 animate-fadeIn">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
+            <h1 data-aos="fade-up" className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
               {homePageData.heroSection.heading}
             </h1>
 
-            <p className="text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed">
+            <p data-aos="fade-up" data-aos-delay="100" className="text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed">
               {homePageData.heroSection.body}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+            <div data-aos="fade-up" data-aos-delay="200" className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button
                 className={"px-5 py-2 bg-white text-secondary rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2"}
                 icon={<ArrowRight size={16} />}
@@ -89,6 +89,8 @@ export default function Home() {
               {services.map((service, index) => (
                 <div
                   key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={100 * (index + 1)}
                   className="w-52 h-36 p-4 bg-white/40 backdrop-blur-lg rounded-xl border border-gray-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center flex-col gap-5 group"
                 >
                   <div className={`size-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center text-white group-hover:-rotate-6 transition-all duration-300`}>
@@ -107,27 +109,29 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-10">
+              <h2 data-aos="fade-right" data-aos-delay="0" className="text-4xl sm:text-5xl font-bold text-gray-900 mb-10">
                 {homePageData.aboutSection.heading}
               </h2>
-              <p className="text-xl text-primary font-semibold">
+              <p data-aos="fade-right" data-aos-delay="100" className="text-xl text-primary font-semibold">
                 {homePageData.aboutSection.tagline}
               </p>
-              <div className="text-base md:text-lg text-text leading-relaxed">
+              <div data-aos="fade-right" data-aos-delay="200" className="text-base md:text-lg text-text leading-relaxed">
                 {homePageData.aboutSection.body}
               </div>
-              <p className="text-lg text-gray-900 font-medium">
+              <p data-aos="fade-right" data-aos-delay="300" className="text-lg text-gray-900 font-medium">
                 {homePageData.aboutSection.cta}
               </p>
-              <Button
-                className={"px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 flex items-center gap-2"}
-                name={"Learn More About Us"}
-                icon={<ArrowRight size={16} />}
-                onClick={() => router.push('about')}
-              />
+              <div data-aos="fade-right" data-aos-delay="400">
+                <Button
+                  className={"px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 flex items-center gap-2"}
+                  name={"Learn More About Us"}
+                  icon={<ArrowRight size={16} />}
+                  onClick={() => router.push('about')}
+                />
+              </div>
             </div>
 
-            <div className="relative">
+            <div className="relative" data-aos="fade" data-aos-delay="300">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-white/80 backdrop-blur-sm p-5 lg:p-8 rounded-xl sm:rounded-2xl lg:rounded-3xl border border-gray-200 shadow-xl">
                 <div className="space-y-4">
@@ -153,16 +157,16 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
           <div className="text-center mb-10 md:mb-16 flex items-center justify-center flex-col">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-5">
+            <h2 data-aos="fade-up" data-aos-delay="0" className="text-4xl sm:text-5xl font-bold text-gray-900 mb-5">
               {homePageData.services.heading}
             </h2>
-            <div className='flex items-center justify-center flex-row gap-3 bg-primary text-white mb-7 rounded-full px-5 py-2 sm:w-max'>
+            <div data-aos="fade-up" data-aos-delay="0" className='flex items-center justify-center flex-row gap-3 bg-primary text-white mb-7 rounded-full px-5 py-2 sm:w-max'>
               <p className="text-[12px] sm:text-base">
                 {homePageData.services.tagline}
               </p>
               <Sparkles size={16} />
             </div>
-            <div className="text-lg text-text max-w-3xl mx-auto leading-relaxed">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-lg text-text max-w-3xl mx-auto leading-relaxed">
               At <span className="font-semibold text-primary">DoubleDigit</span>, we specialize in creating Google and Meta Ad campaigns that attract, engage, and convert. Our team uses advanced analytics, creative storytelling, and audience insights to maximize your ROI and brand presence.
             </div>
           </div>
@@ -170,6 +174,7 @@ export default function Home() {
           <div className="flex items-center justify-center flex-wrap gap-8">
             {services.map((service, index) => (
               <div
+                data-aos="fade-up" data-aos-delay={100 * (index + 1)}
                 key={index}
                 className="group bg-white rounded-2xl min-w-60 max-w-96 w-full h-80 sm:h-80 p-5 md:p-8 border border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
@@ -186,7 +191,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12 flex items-center justify-center">
+          <div data-aos="fade-up" data-aos-delay="0" className="text-center mt-12 flex items-center justify-center">
             <Button
               className={"px-5 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 flex items-center gap-2"}
               name={"View All Services"}
@@ -200,7 +205,7 @@ export default function Home() {
       {/* Vision & mission */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-10">
+          <div data-aos="fade" data-aos-delay="0" className="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-10">
             <div className='max-w-[20rem] w-full md:basis-[40%]'>
               <img src="/assets/vision.svg" alt="Vision" />
             </div>
@@ -215,7 +220,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center flex-col-reverse md:flex-row gap-5 md:gap-10 mt-10">
+          <div data-aos="fade" data-aos-delay="0" className="flex items-center justify-center flex-col-reverse md:flex-row gap-5 md:gap-10 mt-10">
             <div className="md:basis-[60%]">
               <div className='flex items-center justify-start flex-row gap-3 text-secondary'>
                 <h3 className="text-3xl lg:text-4xl font-bold text-center md:text-left w-full">

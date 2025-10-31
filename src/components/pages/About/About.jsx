@@ -64,16 +64,16 @@ export default function About() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
+            <h1 data-aos="fade-up" data-aos-delay="0" className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
               {aboutPageData.heading}
             </h1>
-            <div className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-4">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-4">
               At <span className="font-semibold text-[#1D1DFF]">DoubleDigit</span>, we believe in blending creativity with data and AI-driven insights to craft solutions that are both beautiful and effective. Our mission is simple to deliver measurable impact through innovation.
             </div>
-            <p className="text-2xl text-[#1D1DFF] font-semibold max-w-3xl mx-auto mb-6">
+            <p data-aos="fade-up" data-aos-delay="200" className="text-2xl text-[#1D1DFF] font-semibold max-w-3xl mx-auto mb-6">
               {aboutPageData.tagline}
             </p>
-            <p className="text-lg text-gray-700 font-medium max-w-3xl mx-auto">
+            <p data-aos="fade-up" data-aos-delay="300" className="text-lg text-gray-700 font-medium max-w-3xl mx-auto">
               {aboutPageData.cta}
             </p>
           </div>
@@ -81,8 +81,9 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             {values.map((value, index) => (
               <div
+                data-aos="fade-up" data-aos-delay={100 * (index + 1)}
                 key={index}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition-all hover:-translate-y-2"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-[#1D1DFF] to-[#5F27CD] rounded-xl flex items-center justify-center text-white mb-4">
                   {value.icon}
@@ -102,24 +103,24 @@ export default function About() {
       <section className="pt-20 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div className="order-2 md:order-1">
+            <div data-aos="fade" data-aos-delay="0" className="order-2 md:order-1">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1D1DFF]/20 to-[#5F27CD]/20 rounded-3xl blur-2xl"></div>
                 <div className="relative bg-gradient-to-br from-[#1D1DFF] to-[#5F27CD] rounded-3xl p-12 text-white">
                   <div className="space-y-6">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-around gap-4">
                       <div className="text-5xl font-bold">100+</div>
                       <div className="text-lg">Projects Completed</div>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-around gap-4">
                       <div className="text-5xl font-bold">50+</div>
                       <div className="text-lg">Happy Clients</div>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-around gap-4">
                       <div className="text-5xl font-bold">95%</div>
                       <div className="text-lg">Client Satisfaction</div>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-around gap-4">
                       <div className="text-5xl font-bold">24/7</div>
                       <div className="text-lg">Support Available</div>
                     </div>
@@ -129,10 +130,10 @@ export default function About() {
             </div>
 
             <div className="order-1 md:order-2 space-y-6">
-              <h2 className="text-4xl font-bold text-gray-900">
+              <h2 data-aos="fade-left" data-aos-delay="0" className="text-4xl font-bold text-gray-900">
                 Why Choose DoubleDigit?
               </h2>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              <p data-aos="fade-left" data-aos-delay="100" className="text-base md:text-lg text-gray-600 leading-relaxed">
                 We're more than a digital agency - we're your growth partner. With a proven track record of delivering exceptional results, we combine strategic thinking with creative execution to help businesses thrive in the digital landscape.
               </p>
               <ul className="space-y-4">
@@ -143,7 +144,7 @@ export default function About() {
                   'Cutting-edge tools and technologies',
                   'Proven ROI and measurable results'
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li data-aos="fade-left" data-aos-delay={100 * (index + 1)} key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-[#1D1DFF] flex-shrink-0 mt-1" />
                     <span className="text-gray-700 text-lg">{item}</span>
                   </li>
@@ -157,10 +158,10 @@ export default function About() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 data-aos="fade-up" data-aos-delay="0" className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               {aboutPageData.services.heading}
             </h2>
-            <div className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               At <span className="font-semibold text-[#1D1DFF]">DoubleDigit</span>, we are passionate about delivering innovative digital solutions that empower businesses to thrive in an ever-evolving digital landscape. Our services combine strategy, creativity, and technology to drive measurable results and meaningful growth.
             </div>
           </div>
@@ -168,6 +169,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div
+                data-aos="fade" data-aos-delay={100 * (index + 1)}
                 key={index}
                 className="bg-white rounded-2xl p-8 border border-gray-200 transition-all"
               >
@@ -187,7 +189,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <div className="flex items-center justify-center w-full mt-12">
+          <div data-aos="fade-up" data-aos-delay="0" className="flex items-center justify-center w-full mt-12">
             <Button
               className={"px-5 py-2 bg-gradient-to-r from-[#1D1DFF] to-[#5F27CD] text-white rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2"}
               icon={<ArrowRight size={16} />}
