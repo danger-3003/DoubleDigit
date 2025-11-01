@@ -186,15 +186,15 @@ export default function ServicesPage() {
           <p className="text-base md:text-lg text-blue-100 mb-8">
             Ready to take your business to the next level? Our team is here to help you succeed with tailored solutions that drive real results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              className={"px-5 py-2 bg-white text-secondary rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2"}
+              className={"px-5 py-2 bg-white text-secondary rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2 w-max"}
               icon={<ArrowRight size={16} />}
               name={"Start Your Project"}
               onClick={() => router.push('contact')}
             />
             <Button
-              className={"px-5 py-2 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2"}
+              className={"px-5 py-2 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:shadow-md hover:shadow-white/10 transition-all hover:scale-105 flex items-center gap-2 w-max"}
               icon={<ArrowRight size={16} />}
               name={"Learn More About Us"}
               onClick={() => router.push('about')}
