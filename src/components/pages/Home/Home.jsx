@@ -1,11 +1,12 @@
 "use client"
 
-import { ArrowRight, TrendingUp, Bot, Palette, Globe, Target, Eye, CheckCircle, Sparkles } from 'lucide-react';
+import { ArrowRight, TrendingUp, Bot, Palette, Globe, Target, Eye, CheckCircle, Sparkles, Star } from 'lucide-react';
 import { homePageData } from '@/constants/homePage';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import Image from 'next/image';
+import ScrollMarquee from '@/components/ui/Marquee';
 
 export default function Home() {
   const router = useRouter();
@@ -248,8 +249,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className=" py-10 md:pt-20 bg-gray-900 max-w-7xl w-full rounded-3xl">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">
+              Don't just take our word for it. Hear from businesses that have transformed with DoubleDigit.
+            </p>
+            <div className='mt-10'>
+              <ScrollMarquee>
+                {/* <div className="grid md:grid-cols-3 gap-8"> */}
+                {
+                  homePageData.testimonial.map((testimonial, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-800 border p-3 border-blue-900/50 rounded-2xl transition-all mx-2 max-h-72 max-w-60 sm:max-h-80 sm:max-w-80 h-96 w-full"
+                    >
+                      <div className="flex items-center justify-start gap-3 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-2xl">
+                          {testimonial.image}
+                        </div>
+                        <div className='flex items-start justify-center flex-col'>
+                          <h3 className="font-semibold text-white">{testimonial.name}</h3>
+                          <p className="text-sm text-gray-400">{testimonial.role}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-1 mb-4">
+                        {Array.from({ length: testimonial.rating }).map((_, i) => (
+                          <Star key={i} size={10} className="fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        "{testimonial.text}"
+                      </p>
+                    </div>
+                  ))
+                }
+                {/* </div> */}
+              </ScrollMarquee>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA section */}
-      <section className="py-20 w-full bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl mb-20">
+      <section className="py-10 md:py-20 w-full max-w-7xl bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl my-20">
         <div className="px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?

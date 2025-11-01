@@ -52,5 +52,49 @@ export const homePageData = {
       (<><span className="font-bold">Creative design and branding:</span> Building memorable, impactful brand identities across digital and physical platforms.</>),
       (<><span className="font-bold">High-performance web solutions:</span> Developing responsive, modern websites that enhance user experience and drive business results.</>)
     ]
-  }
+  },
+  testimonial: [
+    {
+      name: 'Sarah Anderson',
+      role: 'CEO, TechStart Inc',
+      image: '👨‍💼',
+      rating: 5,
+      text: 'DoubleDigit transformed our marketing strategy completely. Our ROI increased by 300% in just 6 months. Their team is professional, responsive, and truly cares about results.'
+    },
+    {
+      name: 'Marcus Johnson',
+      role: 'Founder, Creative Studios',
+      image: '👩‍💼',
+      rating: 5,
+      text: 'The web design they created for us is not just beautiful-it\'s highly functional and converted visitors like never before. Highly recommend their services!'
+    },
+    {
+      name: 'Emily Chen',
+      role: 'Marketing Director, Growth Co',
+      image: '👨‍💻',
+      rating: 5,
+      text: 'Their AI chatbot implementation saved us thousands in support costs while improving customer satisfaction. The team was excellent to work with from start to finish.'
+    },
+    {
+      name: 'David Martinez',
+      role: 'Owner, Digital Ventures',
+      image: '👩‍🔬',
+      rating: 5,
+      text: 'We tried other agencies before DoubleDigit. The difference is night and day. Their data-driven approach and creative execution set them apart. Best decision we made.'
+    },
+    {
+      name: 'Lisa Thompson',
+      role: 'VP Marketing, Innovation Labs',
+      image: '👨‍🎨',
+      rating: 5,
+      text: 'Outstanding graphic design and branding work. They understood our vision perfectly and delivered designs that truly represent our brand. We\'ve received countless compliments.'
+    },
+    {
+      name: 'Robert Wilson',
+      role: 'COO, Digital Solutions',
+      image: '👩‍💻',
+      rating: 5,
+      text: 'The AI automation solutions DoubleDigit implemented streamlined our entire workflow. Professional, knowledgeable, and results-oriented. Couldn\'t be happier!'
+    }
+  ]
 }
