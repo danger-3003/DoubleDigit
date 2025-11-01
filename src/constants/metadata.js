@@ -82,7 +82,7 @@ export const DoubleDigitMetadata = {
       "title": "Contact DoubleDigit | Start Your Digital Journey",
       "description": "Reach out to DoubleDigit for consultations in marketing, design, and AI solutions. Let's create your next success story.",
       "url": "https://doubledigit.com/contact",
-      "type": "contact",
+      "type": "website",
       "images": [
         {
           "url": "https://doubledigit.com/assets/og/contact.jpg",
