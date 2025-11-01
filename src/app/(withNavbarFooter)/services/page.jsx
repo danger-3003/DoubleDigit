@@ -1,9 +1,14 @@
-import React from 'react'
+"use client"
 
-function ServicesPage() {
+import React from 'react'
+import ServicesPage from '@/components/pages/Services/Services'
+
+function Services() {
   return (
-    <div>ServicesPage</div>
+    <>
+      <ServicesPage />
+    </>
   )
 }
 
-export default ServicesPage
+export default Services

@@ -100,7 +100,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="pt-20 md:py-20 bg-white">
+      <section className="pt-20 md:py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div data-aos="fade" data-aos-delay="0" className="order-2 md:order-1">
@@ -155,7 +155,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 data-aos="fade-up" data-aos-delay="0" className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -200,7 +200,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="max-w-7xl py-10 md:py-20 bg-gradient-to-r from-[#1D1DFF] to-[#5F27CD] w-full rounded-3xl my-10">
+      <section className="max-w-7xl py-10 md:py-20 bg-gradient-to-r from-[#1D1DFF] to-[#5F27CD] w-full rounded-3xl my-10 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Ready to Start Your Digital Journey?

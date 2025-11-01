@@ -11,13 +11,13 @@ export const servicesPageData = {
     heading: "Our Services",
     body: (
       <>
-        At <span>DoubleDigit</span>, we are passionate about delivering innovative digital solutions that empower businesses to thrive in an ever-evolving digital landscape. Our services combine strategy, creativity, and technology to drive measurable results and meaningful growth.
+        At <span className="text-lg md:text-xl">DoubleDigit</span>, we are passionate about delivering innovative digital solutions that empower businesses to thrive in an ever-evolving digital landscape. Our services combine strategy, creativity, and technology to drive measurable results and meaningful growth.
       </>
     ),
     services: {
       digitalMarketing: {
         heading: "Digital Marketing",
-        body: "We help brands reach the right audience at the right time. Our data-driven campaigns on Google Ads and Meta Ads ensure that every click counts. From strategic planning to ad optimization, we maximize visibility, engagement, and ROI — turning marketing efforts into measurable growth.",
+        body: "We help brands reach the right audience at the right time. Our data-driven campaigns on Google Ads and Meta Ads ensure that every click counts. From strategic planning to ad optimization, we maximize visibility, engagement, and ROI - turning marketing efforts into measurable growth.",
         keyOfferings: [
           "Search, Display & Video Campaigns",
           "Facebook & Instagram Ads",
@@ -37,7 +37,7 @@ export const servicesPageData = {
       },
       graphicDesigning: {
         heading: "Graphic Designing",
-        body: "A strong visual identity is crucial for standing out in today’s competitive market. Our creative team designs logos, brand identities, social media creatives, motion graphics, and more — all crafted to resonate with your audience and elevate your brand presence.",
+        body: "A strong visual identity is crucial for standing out in today's competitive market. Our creative team designs logos, brand identities, social media creatives, motion graphics, and more - all crafted to resonate with your audience and elevate your brand presence.",
         keyOfferings: [
           "Logo & Brand Identity",
           "Social Media Creatives",
@@ -47,7 +47,7 @@ export const servicesPageData = {
       },
       webDesigning: {
         heading: "Web Designing",
-        body: "Your website is the digital face of your brand. We create responsive, high-performing websites that combine functionality with aesthetic appeal. Whether it’s a landing page, e-commerce store, or full web application, our web solutions are designed to convert visitors into loyal customers.",
+        body: "Your website is the digital face of your brand. We create responsive, high-performing websites that combine functionality with aesthetic appeal. Whether it's a landing page, e-commerce store, or full web application, our web solutions are designed to convert visitors into loyal customers.",
         keyOfferings: [
           "UI/UX Design",
           "Next.js & React Websites",
