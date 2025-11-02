@@ -39,6 +39,14 @@ export const homePageData = {
       }
     }
   },
+  companyLogos: [
+    '/assets/logos/chalo.png',
+    '/assets/logos/grow.png',
+    '/assets/logos/kavya_builders.png',
+    '/assets/logos/omi.png',
+    '/assets/logos/smart_kids.png',
+    '/assets/logos/studio.png'
+  ],
   vision: {
     heading: "Our Vision",
     body: "To empower businesses worldwide to thrive in the digital era by combining creativity, technology, and intelligence, delivering innovative solutions that transform brands and drive measurable growth."

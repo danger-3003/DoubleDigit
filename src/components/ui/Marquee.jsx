@@ -4,9 +4,11 @@ import Marquee from "react-fast-marquee";
 function ScrollMarquee({ children }) {
   return (
     <>
-      <Marquee>
-        {children}
-      </Marquee>
+      <div className='w-full overflow-hidden'>
+        <Marquee pauseOnHover autoFill className="flex items-center gap-8">
+          {children}
+        </Marquee>
+      </div>
     </>
   )
 }

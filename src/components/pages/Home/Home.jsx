@@ -1,11 +1,10 @@
 "use client"
 
-import { ArrowRight, TrendingUp, Bot, Palette, Globe, Target, Eye, CheckCircle, Sparkles, Star } from 'lucide-react';
+import { ArrowRight, TrendingUp, Bot, Palette, Globe, Target, CheckCircle, Sparkles, Star } from 'lucide-react';
 import { homePageData } from '@/constants/homePage';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
-import Image from 'next/image';
 import ScrollMarquee from '@/components/ui/Marquee';
 
 export default function Home() {
@@ -52,7 +51,7 @@ export default function Home() {
           {
             background: `linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5)),
             url(/assets/header_bg.jpg)`,
-            backgroundPosition: "center",
+            backgroundPosition: "top center",
             backgroundAttachment: "fixed"
           }
         }
@@ -205,7 +204,7 @@ export default function Home() {
 
       {/* Vision & mission */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8">
           <div data-aos="fade" data-aos-delay="0" className="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-10">
             <div className='max-w-[20rem] w-full md:basis-[40%]'>
               <img src="/assets/vision.svg" alt="Vision" />
@@ -244,6 +243,27 @@ export default function Home() {
             </div>
             <div className='w-full max-w-[20rem] md:basis-[40%]'>
               <img src="/assets/mission.png" alt="Mission" />
+            </div>
+          </div>
+          <div className='flex items-center justify-center flex-col w-full'>
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 my-8 sm:my-10 mt-16">
+              Our Top Clients
+            </h2>
+            <div className="w-full overflow-hidden">
+              <ScrollMarquee>
+                {homePageData.companyLogos.map((item, key) => (
+                  <div
+                    key={key}
+                    className="flex-shrink-0"
+                  >
+                    <img
+                      src={item}
+                      alt="client logo"
+                      className="h-12 sm:h-16 md:h-20 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </ScrollMarquee>
             </div>
           </div>
         </div>
